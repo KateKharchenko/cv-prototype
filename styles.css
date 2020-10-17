@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a, button {
+    transition: all .3s ease-in-out;
+}
+
+body {
+    --text-color: #3d2c24;
+    --primary-color: #ecd8cd;
+    --secondary-color: #fbfcff;
+
+    --size-h1: 42px;
+    --size-h2: 32px;
+    --size-h3: 28px;
+    --size-h4: 24px;
+
+    font: 400 16px 'Raleway', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(to right, var(--secondary-color) 50%, var(--primary-color) 50%);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: var(--size-h1);
+}
+
+h2 {
+    font-size: var(--size-h2);
+}
+
+h3 {
+    font-size: var(--size-h3);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.cv {
+    display: flex;
+}
+
+.cv__cover {
+    background-color: var(--secondary-color);
+    padding: 60px 30px;
+}
+
+.cv__img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 5px solid transparent;
+    box-shadow: 0 0 0 5px var(--primary-color);
+}
+
+.cv__img img {
+    width: 100%;
+} 
+
+.cv__name {
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.cv__position {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--size-h4);
+}
+
+.cv__name,
+.cv__position {
+    text-align: center;
+}
+
+.cv__section {
+    margin: 100px 0;
+}
+
+.cv__list {
+    font-weight: 500;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+}
+
+.cv__list li {
+    margin: 15px 0;
+}
+
+.cv__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cv__link:hover,
+.cv__link:focus,
+.cv__link:active {
+    color: var(--primary-color);
+}
+
+.cv__content {
+    background-color: var(--primary-color);
+    padding: 60px 30px;
+}
+
+.cv__content .cv__title {
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+}
+
+.cv__content .cv__section {
+    margin: 0 0 100px 0;
+}
+
+.cv__content .cv__list li {
+    margin: 30px 0;
+}
+
+.cv__columns {
+    columns: 3;
+    column-gap: 30px;
+}
+
+@media screen and (max-width: 960px) {
+    .cv {
+        flex-direction: column;
+    }
+
+    .cv__columns {
+        columns: 1;
+    }
+
+    .cv__section {
+        margin: 50px 0;
+    }
+}
